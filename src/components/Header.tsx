@@ -55,7 +55,7 @@ export const Header = () => {
       <div className="mx-auto container px-5 py-8">
         <div className="flex justify-between items-center">
           <div>
-            <img src="public/logo.svg" alt="logo" className="w-32" />
+            <img src="logo.svg" alt="logo" className="w-32" />
           </div>
           <div className="flex flex-col gap-4 md:flex-row md:gap-8 items-end">
             <nav className="flex gap-4">
