@@ -25,7 +25,7 @@ export const getRecipes = async (
     if (locale === "es") {
       searchFilters.ingredient = await translate(
         searchFilters.ingredient as string,
-        "en"
+        { from: "es", to: "en" }
       );
     }
     url = `https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=${searchFilters.ingredient}`;
