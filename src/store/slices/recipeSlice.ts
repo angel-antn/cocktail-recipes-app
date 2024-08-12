@@ -16,7 +16,10 @@ export interface RecipeSliceType {
   selectedRecipe?: DrinkDetails;
   modal: boolean;
   fetchCategories: () => Promise<void>;
-  fetchRecipes: (searchFilters: SearchFilters) => Promise<void>;
+  fetchRecipes: (
+    searchFilters: SearchFilters,
+    locale: "en" | "es"
+  ) => Promise<void>;
   selectRecipe: (id: Drink["idDrink"], locale: "en" | "es") => Promise<void>;
   closeModal: () => void;
 }
@@ -32,8 +35,8 @@ export const createRecipeSlice: StateCreator<RecipeSliceType> = (set) => ({
       categories,
     });
   },
-  fetchRecipes: async (searchFilters) => {
-    const recipes = await getRecipes(searchFilters);
+  fetchRecipes: async (searchFilters, locale) => {
+    const recipes = await getRecipes(searchFilters, locale);
     set({
       recipes,
     });

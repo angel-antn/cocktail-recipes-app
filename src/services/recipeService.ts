@@ -15,10 +15,19 @@ export const getCategories = async () => {
   return result;
 };
 
-export const getRecipes = async (searchFilters: SearchFilters) => {
+export const getRecipes = async (
+  searchFilters: SearchFilters,
+  locale: "en" | "es" = "en"
+) => {
   let url: string;
 
   if (searchFilters.mode == "i") {
+    if (locale === "es") {
+      searchFilters.ingredient = await translate(
+        searchFilters.ingredient as string,
+        "en"
+      );
+    }
     url = `https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=${searchFilters.ingredient}`;
   } else {
     url = `https://www.thecocktaildb.com/api/json/v1/1/filter.php?c=${searchFilters.category}`;

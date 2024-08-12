@@ -43,7 +43,7 @@ export const Header = () => {
       errorNotifiication(t("requiredFieldsValidation"));
       return;
     }
-    fetchRecipes(searchFilters);
+    fetchRecipes(searchFilters, locale);
   };
 
   const { t } = useTranslation();

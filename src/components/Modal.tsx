@@ -82,7 +82,7 @@ export default function Modal() {
                   >
                     {selectedRecipe?.strDrink}
                   </DialogTitle>
-                  <div className="overflow-hidden w-96 mx-auto rounded-md">
+                  <div className="overflow-hidden max-w-96 mx-auto rounded-md">
                     <img
                       src={selectedRecipe?.strDrinkThumb}
                       alt={selectedRecipe?.strDrink}
