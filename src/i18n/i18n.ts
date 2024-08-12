@@ -24,6 +24,7 @@ i18n.use(initReactI18next).init({
         noFavoritesMsg: "Add your favorite recipes to see them later",
         addFavoriteMsg: "Added to favorites",
         removeFavoriteMsg: "Removed from favorites",
+        closeButton: "Close Recipe",
       },
     },
     es: {
@@ -47,6 +48,7 @@ i18n.use(initReactI18next).init({
         noFavoritesMsg: "Agrega tus recetas favoritas para verlas más adelante",
         addFavoriteMsg: "Agregado a favoritos",
         removeFavoriteMsg: "Eliminado de favoritos",
+        closeButton: "Cerrar Receta",
       },
     },
   },

@@ -119,6 +119,14 @@ export default function Modal() {
                       ? t("removeFavoriteButton")
                       : t("addFavoriteButton")}
                   </button>
+                  <button
+                    className="mt-3 bg-red-400 hover:bg-red-500 w-full p-3 font-bold text-white text-lg rounded-md"
+                    onClick={() => {
+                      closeModal();
+                    }}
+                  >
+                    {t("closeButton")}
+                  </button>
                 </DialogPanel>
               </TransitionChild>
             </div>

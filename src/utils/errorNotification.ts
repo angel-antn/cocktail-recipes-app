@@ -1,3 +1,4 @@
 import { toast } from "react-toastify";
 
-export const errorNotifiication = (msg: string) => toast.error(msg);
+export const errorNotifiication = (msg: string) =>
+  toast.error(msg, { draggable: true });
